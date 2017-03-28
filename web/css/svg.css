@@ -1,0 +1,74 @@
+#chart 
+{ 
+	position:relative; 
+	float:left; 
+	width:100%; height:475px;
+	background:#FFF;
+}
+#chart svg
+{
+	width:100%; height:100%;
+}
+.title
+{
+	font-size:24pt;
+	fill:#CCC;
+	stroke:#999;
+	stroke-width:1px;
+	text-anchor:middle;
+}
+.axis
+{
+	stroke:#999;
+	stroke-width:.5px;
+}
+.yaxis
+{
+	font-size:10pt;
+	fill:#999;
+	text-anchor:end;
+}
+.column
+{
+	fill:#CCC;
+	stroke:#999;
+	stroke-width:1px;
+}
+.value
+{
+	font-size:10pt; font-weight: bold;
+	fill:#999;
+	text-anchor:middle;
+}
+.xaxis
+{
+	font-size:10pt;
+	fill:#999;
+	text-anchor:middle;
+}
+#title-svg{
+	text-align: center; font-size: 12pt; color: #999;
+	position: relative; float: left; width: 60%; margin: 10px 20% 3px 20%;
+	height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

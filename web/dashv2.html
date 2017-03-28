@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<Title>Smart Place</title>
+		<link rel="shortcut icon" href="images/location.ico">	
+		<link href="css/style.css" rel="stylesheet"></link>		
+		<link href="css/logo.css" rel="stylesheet"></link>		
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+		<script type="text/javascript" src="js/charts.js"></script>
+		<script src="js/jquery-1.12.4.js"></script>
+  		<script src="js/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>		
+		<link href="css/svg.css" rel="stylesheet"></link>
+		<script src="js/svg.js"></script>	
+	</head>
+
+	<body class="font" onload="getLocations();">
+
+		<div id="content">
+			<header>
+				<div id="header">
+					<div id="logo">
+						<a href='dashboard.html'><img src="images/logo.png" ></img></a>
+					</div>
+				</div>
+			</header>
+			<div id="main">
+				<div id="navbar">
+					<div class="options" onclick="window.location='index.html'"><i class="fa fa-line-chart" aria-hidden="true"></i> Chart</div>
+					<div class="options" onclick=""><i class="fa fa-history" aria-hidden="true"></i> History</div>
+					<div class="options" onclick="window.location='display.html'"><i class="fa fa-television" aria-hidden="true"></i>Smart Display </div>
+					<div class="div-cont-btn tooltip-btn">
+						<button class="btn-add" data-toggle="modal" data-target=".bs-example-modal-sm">+</button>
+						<span class="tooltip-text">Add location</span>
+					</div>
+				</div>
+				<div id="container">					
+					<div id="option_menu">
+						<div class="selects">
+							<p><i class="fa fa-location-arrow" aria-hidden="true"></i> Location:
+								<select id="select_location" class="input-format font"></select>
+							</p>
+						</div>
+						<div class="selects">	
+							<p><i class="fa fa-calendar" aria-hidden="true"></i> Date:
+								<input type="text" class="input-format font" id="datepicker" placeholder="Select a date">
+								<script>
+									//datepicker
+									$(function(){
+
+									   var enableDisableSubmitBtn = function(){
+										 var startVal = $('#datepicker').val().trim();
+										 var disableBtn =  startVal.length == 0;
+										 $('#btnAdd').attr('disabled', disableBtn);
+									   }
+
+									   $('#datepicker').datepicker({
+											 dateFormat: 'yy-mm-dd' ,
+											 onSelect: function(selected) {
+												  enableDisableSubmitBtn();
+												}
+										});
+									});
+								</script>
+							</p>
+						</div>
+						<!-- Small modal -->
+						<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+						  <div class="modal-dialog modal-sm" role="document">
+							<div class="modal-content">
+								<div class="modal-header"> 
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">×</span>
+									</button> 
+									<h4 class="modal-title">Add Location</h4> 
+								</div>
+								<div class="modal-body" style="height:200px;"> 
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
+									 <input type="number" id="txtlat" placeholder="Add latitude" class="input-format font number-only">
+									<br><br>
+									<i class="fa fa-map-marker" aria-hidden="true"></i>
+									 <input type="number" id="txtlong" placeholder="Add lenght" class="input-format font number-only">
+									<br><br>
+									<i class="fa fa-comment" aria-hidden="true"></i>
+									<input type="text" id="txtdescription" class="input-format font" placeholder="Add Name">
+									<br><br>
+									<input id='btn-save' type="submit" value="Save" onclick="addLocation();">
+								</div>
+							</div>
+						  </div>
+						</div>						
+						<div class="selects">
+							<button id="btnAdd" onclick="init();" disabled="disabled" class="font"><i class="fa fa-bar-chart" aria-hidden="true"></i> Show Chart</button>
+						</div>
+					</div>
+					<!--SVG-->
+					<div id="chart">
+						<div id="title-svg"></div>
+						<svg>
+							<text x="10%" y="4%" class="xaxis">Activities</text>
+							<text x="92%" y="90.5%" class="xaxis">Hours</text>
+							<line x1="10%" y1="9%" x2="10%" y2="90%" class="axis"></line>
+							<line x1="10%" y1="90%" x2="90%" y2="90%" class="axis"></line>
+							
+							
+							<line x1="9%" y1="10%" x2="10%" y2="10%" class="axis"></line>
+							<line x1="9%" y1="18%" x2="10%" y2="18%" class="axis"></line>
+							<line x1="9%" y1="26%" x2="10%" y2="26%" class="axis"></line>
+							<line x1="9%" y1="34%" x2="10%" y2="34%" class="axis"></line>
+							<line x1="9%" y1="42%" x2="10%" y2="42%" class="axis"></line>
+							<line x1="9%" y1="50%" x2="10%" y2="50%" class="axis"></line>
+							<line x1="9%" y1="58%" x2="10%" y2="58%" class="axis"></line>
+							<line x1="9%" y1="66%" x2="10%" y2="66%" class="axis"></line>
+							<line x1="9%" y1="74%" x2="10%" y2="74%" class="axis"></line>
+							<line x1="9%" y1="82%" x2="10%" y2="82%" class="axis"></line>
+							
+							
+							<text x="8%" y="11%" class="yaxis">200</text>
+							<text x="8%" y="19%" class="yaxis">180</text>
+							<text x="8%" y="27%" class="yaxis">160</text>
+							<text x="8%" y="35%" class="yaxis">140</text>
+							<text x="8%" y="43%" class="yaxis">120</text>
+							<text x="8%" y="51%" class="yaxis">100</text>
+							<text x="8%" y="59%" class="yaxis">80</text>
+							<text x="8%" y="67%" class="yaxis">60</text>
+							<text x="8%" y="75%" class="yaxis">40</text>
+							<text x="8%" y="83%" class="yaxis">20</text>
+							<text x="8%" y="91%" class="yaxis">0</text>
+							
+							<rect id="column0" x="11%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value0" x="12.25%" y="88%" class="value"></text>
+							<text id="time0" x="12.25%" y="94%" class="xaxis">00:00</text>
+							
+							<rect id="column1" x="14.25%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value1" x="15.5%" y="88%" class="value"></text>
+							<text id="time1" x="15.5%" y="94%" class="xaxis">01:00</text>
+							
+							<rect id="column2" x="17.5%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value2" x="18.75%" y="88%" class="value"></text>
+							<text id="time2" x="18.75%" y="94%" class="xaxis">02:00</text>
+							
+							<rect id="column3" x="20.75%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value3" x="22%" y="88%" class="value"></text>
+							<text id="time3" x="22%" y="94%" class="xaxis">03:00</text>
+								
+							<rect id="column4" x="24%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value4" x="25.25%" y="88%" class="value"></text>
+							<text id="time4" x="25.25%" y="94%" class="xaxis">04:00</text>
+								
+							<rect id="column5" x="27.25%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value5" x="28.5%" y="88%" class="value"></text>
+							<text id="time5" x="28.5%" y="94%" class="xaxis">05:00</text>
+							
+							<rect id="column6" x="30.5%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value6" x="31.75%" y="88%" class="value"></text>
+							<text id="time6" x="31.75%" y="94%" class="xaxis">06:00</text>
+							
+							<rect id="column7" x="33.75%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value7" x="35%" y="88%" class="value"></text>
+							<text id="time7" x="35%" y="94%" class="xaxis">07:00</text>
+							
+							<rect id="column8" x="37%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value8" x="38.25%" y="88%" class="value"></text>
+							<text id="time8" x="38.25%" y="94%" class="xaxis">08:00</text>
+							
+							<rect id="column9" x="40.25%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value9" x="41.5%" y="88%" class="value"></text>
+							<text id="time9" x="41.5%" y="94%" class="xaxis">09:00</text>
+							
+							<rect id="column10" x="43.5%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value10" x="44.75%" y="88%" class="value"></text>
+							<text id="time10" x="44.75%" y="94%" class="xaxis">10:00</text>
+							
+							<rect id="column11" x="46.75%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value11" x="48%" y="88%" class="value"></text>
+							<text id="time11" x="48%" y="94%" class="xaxis">11:00</text>
+							
+							<rect id="column12" x="50%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value12" x="51.25%" y="88%" class="value"></text>
+							<text id="time12" x="51.25%" y="94%" class="xaxis">12:00</text>
+							
+							<rect id="column13" x="53.25%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value13" x="54.5%" y="88%" class="value"></text>
+							<text id="time13" x="54.5%" y="94%" class="xaxis">13:00</text>							
+							
+							<rect id="column14" x="56.5%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value14" x="57.75%" y="88%" class="value"></text>
+							<text id="time14" x="57.75%" y="94%" class="xaxis">14:00</text>							
+							
+							<rect id="column15" x="59.75%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value15" x="61%" y="88%" class="value"></text>
+							<text id="time15" x="61%" y="94%" class="xaxis">15:00</text>							
+							
+							<rect id="column16" x="63%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value16" x="64.25%" y="88%" class="value"></text>
+							<text id="time16" x="64.25%" y="94%" class="xaxis">16:00</text>
+							
+							<rect id="column17" x="66.25%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value17" x="67.5%" y="88%" class="value"></text>
+							<text id="time17" x="67.5%" y="94%" class="xaxis">17:00</text>
+							
+							<rect id="column18" x="69.5%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value18" x="70.75%" y="88%" class="value"></text>
+							<text id="time18" x="70.75%" y="94%" class="xaxis">18:00</text>
+							
+							<rect id="column19" x="72.75%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value19" x="74%" y="88%" class="value"></text>
+							<text id="time19" x="74%" y="94%" class="xaxis">19:00</text>
+							
+							<rect id="column20" x="76%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value20" x="77.25%" y="88%" class="value"></text>
+							<text id="time20" x="77.25%" y="94%" class="xaxis">20:00</text>
+							
+							<rect id="column21" x="79.25%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value21" x="80.5%" y="88%" class="value"></text>
+							<text id="time21" x="80.5%" y="94%" class="xaxis">21:00</text>
+							
+							<rect id="column22" x="82.5%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value22" x="83.75%" y="88%" class="value"></text>
+							<text id="time22" x="83.75%" y="94%" class="xaxis">22:00</text>
+							
+							<rect id="column23" x="85.75%" y="89%" width="2.25%" height="1%" class="column"></rect>
+							<text id="value23" x="87%" y="88%" class="value"></text>
+							<text id="time23" x="87%" y="94%" class="xaxis">23:00</text>						
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</body>	
+</html>

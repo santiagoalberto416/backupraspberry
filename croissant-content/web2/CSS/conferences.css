@@ -1,0 +1,229 @@
+.conference, .line-light
+{
+	position: relative; float: left;
+}
+
+#h1, .conference
+{
+	width: 100%;
+	margin: 20px 0px 0px 0px;
+}
+#h1
+{
+	/*background: pink;*/
+	text-align: left;
+	color: gray;
+	font-size: 28px;
+}
+.conference
+{
+	width: 100%;
+	/*height: 50px;*/
+	
+	cursor: pointer;
+}
+.line-light
+{
+	width: 100%;
+	height: 1px;
+	background:#D8D8D8;
+	margin: 20px 0px 0px 0px;
+}
+.table-conference
+{
+	border: none;
+	width: 100%;
+}
+.table-conference:hover{ cursor:pointer; }
+.cell-green
+{
+	background-color: #2D7069;
+}
+.cell-green:nth-child(1)
+{
+	border-radius: 10px 0px 0px 0px ;
+}
+.cell-green:nth-child(2)
+{
+	border-radius: 0px 0px 10px 0px ;
+}
+.cell-light-green
+{
+	background-color: #327D75;
+	
+}
+.cell-light-green:nth-child(1)
+{
+	border-radius: 0px 0px 0px 10px;
+}
+.cell-light-green:nth-child(2)
+{
+	border-radius: 0px 10px 0px 0px;
+}
+.cell-light-green, .cell-green
+{
+	color: #FFF;
+	font-size: 14px;
+	width: 50%;
+	padding: 10px;
+	
+}
+
+h3
+{
+	margin: 0px;
+	/*background-color: white;*/
+	padding: 0px;
+	display: inline-block;
+	font-size: 17px;
+}
+.button-options
+{
+	position: relative; float: left;
+}
+.content-info-conference
+{
+	margin-top: 20px;
+	position: relative;
+	float: left;
+	width: 354px;
+	margin-right: 20px;
+	
+}
+.content-info-conference:nth-child(2n+1)
+{
+	margin-right: 0px;
+}
+
+.cell-light-green
+{
+	/*background-color: #327D75;*/
+	
+}
+.td-speaker, .td-title, .td-info-conference
+{
+	color: rgba(255,255,255,0.8);
+	font-size: 16px;
+	width: 50%;
+	padding: 8px;
+	text-align: center;
+	border-top: 1px solid rgba(255,255,255,0.2);
+	/*border-right: 1px solid rgba(255,255,255,0.2);*/
+	
+}
+.td-speaker
+{
+	font-size: 16px; padding-left: 10px;
+	/*background: red;*/
+	padding: 8px 0px 8px 0px;
+}
+.td-speaker img
+{
+	position: relative;
+	width: 40px; 
+	vertical-align: middle; 
+	margin-left: 10px; 
+	float: left;
+}
+#content-speaker
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+	color: #FFF;
+}
+#name-speaker
+{
+	position: absolute;
+	top: 50%;
+	left: 60px;
+	transform: translateY(-50%);
+	color: rgba(255,255,255,0.8);
+}
+.td-title
+{
+	font-size: 26px;
+	color: #FFF;
+	border-top: none;
+}
+.td-info-conference:nth-child(1)
+{
+	text-align: left;
+	width: 70%;
+}
+.td-info-conference img
+{
+	width: 18px; margin-bottom: 3px; opacity: 0.7;
+}
+h3
+{
+	margin: 0px;
+	/*background-color: white;*/
+	padding: 0px;
+	display: inline-block;
+	font-size: 17px;
+}
+.table-conference
+{
+	width: 100%;
+	background: #327D75;
+	border-radius: 5px;
+}
+#subject-content
+{
+	padding-top: 10px;
+}
+#subject-matter
+{
+	padding-bottom: 35px;
+}
+.button-options
+{
+	width: 100%;
+	background-color: #2D7069;
+	border: 0px;
+	color: #FFF;
+	font-size: 25px;
+	margin-top: 20px;
+	padding: 10px 0px 10px 0px;
+	border-radius: 10px;
+}
+@media only screen and (max-width:1280px)
+{
+}
+@media only screen and (max-width:768px)
+{
+	#h1 {font-size: 26px;}
+	.content-info-conference
+	{
+		width: 100%;
+		margin-right: 0px;
+	}
+	.td-speaker img { width: 50px;}
+	#name-speaker { left: 70px;}
+}
+@media only screen and (max-width:640px)
+{
+	#h1 {font-size: 24px;}
+	.td-speaker img { width: 40px;}
+	#name-speaker { left: 60px;}
+}
+@media only screen and (max-width:480px)
+{
+	#h1 {font-size: 20px;}
+	.td-speaker, .td-info-conference
+	{
+		
+		font-size: 13px;
+		
+	}
+	.td-title
+	{
+		font-size: 20px;
+	}
+	h3{font-size: 13px;}
+	.td-speaker img { width: 30px;}
+	#name-speaker { left: 50px;}
+	.td-info-conference img {width: 18px;}
+}

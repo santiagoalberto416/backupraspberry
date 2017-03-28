@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Croissant</title>
+		<link rel="shortcut icon" href="Images/croissantico.ico">
+		<link href="CSS/style.css" rel="stylesheet"></link>
+		<link href="CSS/menu-desktop.css" rel="stylesheet"></link>
+		<link href="CSS/conferences.css" rel="stylesheet"></link>
+		<script src="JS/login.js"></script>
+		<script src="JS/language.js"></script>
+		<!--viewport: utilizado únicamente por dispositivos móviles.-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	</head>
+	
+	<body onLoad="onLoad(), showInfo(), showEvents()">
+		<div id="content">
+			<header>
+				<div id="header">
+					<!--<div id="hamburguer" onclick="showSideMenu();">
+						<img src="Images/menu-icon.png"></img>
+					</div>-->
+					<div id="logo">
+						<img src="Images/logo.png"></img>
+					</div>
+                <div id="event-logo"><div id="event-name"></div></div>
+				</div>
+			</header>
+			<div id="main">
+				<nav>
+					<div id="content-menu">
+						<div id="info-user">
+							<img class="img-user" src="Images/user.png"></img>
+							<div id='moderator-name' class="user-name">
+								Hello
+							</div>
+						</div>
+						<div id="div-logout" onclick="logout();">
+								<div id="text-logout">Logout</div>
+								<img src="Images/logout.png"></img>
+						</div>
+					</div>
+				</nav>
+				<div id="info-user-mobile">
+				
+					<div id="img-user-mobile">
+						<img class="img-user" src="Images/user.png"/>
+					</div>
+					<div id='user-name' class="user-name">
+					Hello!
+					</div>
+					<button id="logout" onclick="logout();">
+						Logout
+					</button>
+				
+				</div>
+				<div id="conference-title" class="page-title">
+					Events
+				</div>
+				<div id="subject-matter" style="">
+					<div id="subject-content">
+						<div id="h1">Select an event.</div>
+						<div id="actual-conference">
+						</div>
+						<div class="line-light"></div>
+						
+					</div>
+					</div>
+				</div> <!-- subject-matter -->
+		</div>
+		<script src="JS/animation.js"></script>
+		<script src="JS/TweenMax.min.js"></script>
+		<script src="JS/CSSPlugin.min.js"></script>
+		<script src="JS/ScrollToPlugin.min.js"></script>
+		<script src="JS/functions.js"></script>
+		<script src="JS/classes.js"></script>
+	</body>
+</html>

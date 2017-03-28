@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="CSS/faq.css"/>
+    
+    <link rel="stylesheet" href="CSS/jquery.modal.css"/>
+    <link rel="stylesheet" href="CSS/administrator.css"/>
+    <script src="JS/jquery-3.0.0.min.js" defer></script>
+    <script src="JS/jquery.modal.js" defer></script>
+    <script src="JS/jquery.validate.js" defer></script>
+    <script src="JS/additional-methods.js" defer></script>
+    <script src="JS/TweenMax.min.js" defer></script>
+    <script src="JS/autosize.js" defer></script>
+    <script src="JS/administrator.js" defer></script>
+</head>
+
+<body>
+    <header>
+          <div id="header">
+            <div id="logo">
+              <img src="ImagesX/logo.png" />
+            </div>
+            <div class="conteiner-user-info vertical-center">
+                <img class="float-right" style="margin-left: 10px;" src="Images/ic_account_circle_white_24px.svg">
+                <div id="user-name" class="float-right text-color" style="margin-top: 2px;">Brandon Reyes</div>
+            </div>
+          </div>
+        </header>
+    <div id="add-event-form" class="form-conteiner horizontal-center">
+        <input type="file" name="file" id="file" style="display: none;"/>
+        <div class="form-title-conteiner">
+            <h1>Event Manager</h1>
+            <h5 class="inactive-label">Create your event</h5>
+        </div>
+        <form id="form-add-event">
+            <div class="form-content-conteiner">
+                <div id="form-logo-conteiner">
+                    <div id="content-text">
+                        <div><img src="Images/ic_image_white_24px.svg"/></div>
+                        <div style="color: white;">Add Logo</div>
+                    </div>
+                </div>
+                <input id="event-id" name="eventid" type="text" style="display: none;"/>
+                <input id="event-image" name="filename" class="text-input" type="text" autocomplete="off" style="display: none;"/>
+                <input id="event-name" class="text-input" type="text" placeholder="Name" name="name" autocomplete="off"/>
+                <textarea name="description" rows="1" id="event-description" class="text-input" placeholder="Description" autocomplete="off"></textarea>
+                <div class="form-label">Select two colors for the event theme</div>
+                <input id="event-primary-color" class="text-input" type="text" name="eventPrimaryColor" autocomplete="off" style="display: none;"/>
+                <input id="event-accent-color" class="text-input" type="text" name="eventAccentColor" autocomplete="off" style="display: none;"/>
+                <div id="form-colors-conteiner">
+                    <!--<div class="form-color-item" style="background: rgb(211, 47, 47);">
+                        <span>Red</span>
+                        <div class="color-checked">
+                            <div>Primary</div>
+                            <img src="Images/ic_check_circle_white_24px.svg"/>
+                        </div>
+                    </div>-->
+
+                </div>
+            </div>
+            <div class="form-buttons-conteiner">
+                <button class="flat-button float-right">CANCEL</button>
+                <button type="submit" id="save-button" class="flat-button float-right text-accent">SAVE</button>
+                <div style="clear:both"></div>
+            </div>
+        </form>
+        <div id="message" style="display: none;">
+            <h3 class="title-modal">SUCCES!</h3>
+            Your event has been added. Now, you can manage it.<br>
+            <button class="flat-button float-right flat-button-modal text-accent" onclick="window.location = 'event-control-panel.html'">Go to event control panel!</button>
+        </div>
+    </div>
+</body>
+</html>

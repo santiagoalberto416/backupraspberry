@@ -1,0 +1,50 @@
+[25-Jan-2017 17:13:22 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'friendlydisplays' in /home/ubuntu/workspace/croissant-web/classes/classes/connection.php on line 17
+[25-Jan-2017 17:13:22 UTC] PHP Stack trace:
+[25-Jan-2017 17:13:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/loginUser.php:0
+[25-Jan-2017 17:13:22 UTC] PHP   2. User->__construct() /home/ubuntu/workspace/croissant-web/classes/loginUser.php:30
+[25-Jan-2017 17:13:22 UTC] PHP   3. Connection::open_connection() /home/ubuntu/workspace/croissant-web/classes/classes/user.php:51
+[25-Jan-2017 17:13:22 UTC] PHP   4. mysqli->mysqli() /home/ubuntu/workspace/croissant-web/classes/classes/connection.php:17
+[25-Jan-2017 17:14:24 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'friendlydisplays' in /home/ubuntu/workspace/croissant-web/classes/classes/connection.php on line 17
+[25-Jan-2017 17:14:24 UTC] PHP Stack trace:
+[25-Jan-2017 17:14:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/loginUser.php:0
+[25-Jan-2017 17:14:24 UTC] PHP   2. User->__construct() /home/ubuntu/workspace/croissant-web/classes/loginUser.php:30
+[25-Jan-2017 17:14:24 UTC] PHP   3. Connection::open_connection() /home/ubuntu/workspace/croissant-web/classes/classes/user.php:51
+[25-Jan-2017 17:14:24 UTC] PHP   4. mysqli->mysqli() /home/ubuntu/workspace/croissant-web/classes/classes/connection.php:17
+[25-Jan-2017 17:16:00 UTC] PHP Warning:  mysqli::mysqli(): (HY000/1049): Unknown database 'friendlydisplays' in /home/ubuntu/workspace/croissant-web/classes/classes/connection.php on line 17
+[25-Jan-2017 17:16:00 UTC] PHP Stack trace:
+[25-Jan-2017 17:16:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/loginUser.php:0
+[25-Jan-2017 17:16:00 UTC] PHP   2. User->__construct() /home/ubuntu/workspace/croissant-web/classes/loginUser.php:30
+[25-Jan-2017 17:16:00 UTC] PHP   3. Connection::open_connection() /home/ubuntu/workspace/croissant-web/classes/classes/user.php:51
+[25-Jan-2017 17:16:00 UTC] PHP   4. mysqli->mysqli() /home/ubuntu/workspace/croissant-web/classes/classes/connection.php:17
+[27-Mar-2017 22:40:45 UTC] PHP Warning:  Missing argument 1 for SensorActivity::Add(), called in /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php on line 15 and defined in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 76
+[27-Mar-2017 22:40:45 UTC] PHP Stack trace:
+[27-Mar-2017 22:40:45 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[27-Mar-2017 22:40:45 UTC] PHP   2. SensorActivity->Add() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:15
+[27-Mar-2017 22:54:15 UTC] PHP Fatal error:  Cannot pass parameter 3 by reference in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 83
+[27-Mar-2017 22:54:15 UTC] PHP Stack trace:
+[27-Mar-2017 22:54:15 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[27-Mar-2017 22:54:15 UTC] PHP   2. SensorActivity->Add() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:16
+[27-Mar-2017 22:54:40 UTC] PHP Fatal error:  Cannot pass parameter 3 by reference in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 83
+[27-Mar-2017 22:54:40 UTC] PHP Stack trace:
+[27-Mar-2017 22:54:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[27-Mar-2017 22:54:40 UTC] PHP   2. SensorActivity->Add() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:16
+[28-Mar-2017 01:29:27 UTC] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 36
+[28-Mar-2017 01:29:27 UTC] PHP Stack trace:
+[28-Mar-2017 01:29:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[28-Mar-2017 01:29:27 UTC] PHP   2. SensorActivity->__construct() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:13
+[28-Mar-2017 01:29:27 UTC] PHP   3. date() /home/ubuntu/workspace/croissant-web/classes/classes/activity.php:36
+[28-Mar-2017 01:30:03 UTC] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 36
+[28-Mar-2017 01:30:03 UTC] PHP Stack trace:
+[28-Mar-2017 01:30:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[28-Mar-2017 01:30:03 UTC] PHP   2. SensorActivity->__construct() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:13
+[28-Mar-2017 01:30:03 UTC] PHP   3. date() /home/ubuntu/workspace/croissant-web/classes/classes/activity.php:36
+[28-Mar-2017 01:30:05 UTC] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 36
+[28-Mar-2017 01:30:06 UTC] PHP Stack trace:
+[28-Mar-2017 01:30:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[28-Mar-2017 01:30:06 UTC] PHP   2. SensorActivity->__construct() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:13
+[28-Mar-2017 01:30:06 UTC] PHP   3. date() /home/ubuntu/workspace/croissant-web/classes/classes/activity.php:36
+[28-Mar-2017 01:30:56 UTC] PHP Warning:  date() expects at least 1 parameter, 0 given in /home/ubuntu/workspace/croissant-web/classes/classes/activity.php on line 36
+[28-Mar-2017 01:30:56 UTC] PHP Stack trace:
+[28-Mar-2017 01:30:56 UTC] PHP   1. {main}() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:0
+[28-Mar-2017 01:30:56 UTC] PHP   2. SensorActivity->__construct() /home/ubuntu/workspace/croissant-web/classes/addActivityUser.php:13
+[28-Mar-2017 01:30:56 UTC] PHP   3. date() /home/ubuntu/workspace/croissant-web/classes/classes/activity.php:36

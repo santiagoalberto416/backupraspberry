@@ -1,0 +1,89 @@
+*{ font-family:arial; }
+body{ margin:0px; }
+
+#svg, #chart { position: relative; height: 200px; }
+#chart {width:20%; margin:10px 0 10px 0; float: left;}
+#container { width:98%; margin:30px 1% 10px 1%; height: 100px; position: relative; float:left; }
+
+#svg { width:68%;  margin:10px 2% 10px 0; float:right;}
+.title
+{
+	font-size:12pt; font-weight:bold;
+	fill:#dcdcdc; stroke:#999; stroke-width:1px;
+	font-family: arial, sans-serif;
+}
+.question, .answer, .head
+{ 
+	text-align: center;
+	font-family: arial, sans-serif;
+}
+
+.answer { font-size: 12pt; margin-top: 10px; font-weight: bold; color:#999; }
+.question { font-size: 18pt; color:#2D7069; }
+.head { font-size: 18pt; color:#999; }
+
+#images 
+{
+	position: relative;
+	width: 8%; margin:15px 0 10px 2%; float: left;
+}
+.imgSvg
+{
+	width: 80%; margin-bottom: 5px;
+}
+.line 
+{ stroke:#999; }
+
+.value
+{
+	font-size:20pt; font-weight:bold;
+	fill:#FFF; stroke:#4A92B8; stroke-width:1px;
+}
+.graph { fill:#32637d; }
+
+#stats { width:98%; margin:10px 1% 10px 1%; height: 190px; position: relative; float:left; }
+.wrong, .correct
+{
+	position: relative;
+	width:20%; height: 150px; font-size: 70pt; font-weight: bold;
+}
+.wrong 
+{
+	float:right;
+	margin: 20px 25% 10px 1%;
+	color:#FA5858; border-radius: 5px; border:5px solid #FA5858;
+}
+.correct
+{
+	float:left;
+	margin: 20px 1% 10px 25%;
+	color:#01DF74; border-radius: 5px; border:5px solid #01DF74;
+}
+
+
+.wrongx, .correctx
+{
+	text-align: center; font-size: 15pt; 
+}
+.correctx { color:#01DF74; }
+.wrongx { color:#FA5858; }
+
+@media only screen and (max-width:480px)
+{
+	.title
+	{
+		font-size:10pt; font-weight:bold;
+		
+	}
+	#svg { width:63%;  margin:10px 2% 10px 0; }
+	#chart {width:25%; margin:10px 0 10px 2%; }
+	#images 
+	{
+		position: relative;
+		width: 8%; margin:15px 0 10px 0; float: left;
+	}
+	.imgSvg
+	{
+		width: 110%; margin-bottom: 18px;
+	}
+}

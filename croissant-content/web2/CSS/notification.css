@@ -1,0 +1,37 @@
+.notification
+{
+	display: none;
+	width: 250px;
+	position: fixed;
+	padding: 15px 8px 15px 8px;
+	bottom: 50px;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: tranlsateX(-50%);
+	background: #374E78;
+	color: white;
+	border-radius: 5px;
+}
+.text-notification
+{
+	position: relative;
+	float: left;
+	margin-left: 21px;
+}
+.close-notification
+{
+	position: relative;
+	float: right;
+	margin-right: 4px;
+}
+.line-notification
+{
+	position: absolute;
+	left: 230px;
+	width: 1px;
+	height: 90%;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	background: rgba(255,255,255,0.5);
+}

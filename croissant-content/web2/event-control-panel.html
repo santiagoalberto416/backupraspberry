@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/faq.css"/>
+    <link rel="stylesheet" href="CSS/administrator.css" />
+    <link rel="stylesheet" href="CSS/jquery.modal.css"/>
+    <link rel="stylesheet" href="CSS/jquery.datetimepicker.min.css"/>
+    <script src="JS/jquery-3.0.0.min.js" defer></script>
+    <script src="JS/TweenMax.min.js" defer></script>
+    <script src="JS/jquery.datetimepicker.full.js" defer></script>
+    <script src="JS/jquery.validate.js" defer></script>
+    <script src="JS/additional-methods.js" defer></script>
+    <script src="JS/jquery.modal.js" defer></script>
+    <script src="JS/autosize.js" defer></script>
+    <script src="JS/masonry.pkgd.min.js" defer></script>
+    <script src="JS/knockout-3.4.0.js" defer></script>
+    <script src="JS/administrator-knock.js" defer></script>
+    <script src="JS/colors-functions.js" defer></script>
+
+    <title>Croissant</title>
+    <style>
+        body
+        {
+            position: absolute;
+            overflow-y: auto;
+            background: #dedede;
+        }
+        
+        header
+        {
+            width: 100%;
+            position: fixed;
+            height: 65px;
+            top: 0px;
+            left: 0px;
+            z-index: 10;
+            text-align: left;
+            box-shadow: none;
+        }
+
+        header img
+        {
+            margin-left: 20px;
+        }
+        
+        .modal
+        {
+            padding: 0px;
+        }
+        #conteiner-add-conference
+        {
+            width: 480px;
+        }
+
+        .form-title-conteiner h4
+        {
+            margin-top: 5px;
+        }
+        .text-input
+        {
+            font-size: 18px;
+            margin-bottom: 20px;
+            
+        }
+        input[name="title"] {
+            width: 100%;
+        }
+        
+        input[name="title"]
+        {
+            font-size: 25px;
+        }
+        
+        select
+        {
+            border: none;
+            outline: none;
+           width: 100%;
+        }
+        
+        .labels-form
+        {
+            display: block;
+            color: #8e8e8e;
+            margin-top: 5px;
+            padding-bottom: 5px;
+            text-align: left;
+            font-size: 14px;
+        }
+        
+        .to-left
+        {
+            width: 48%;
+            position: relative;
+            float: left;
+        }
+        .to-right
+        {
+            width: 48%;
+            position: relative;
+            float: right;
+        }
+        #event-description
+        {
+            margin-top: 0px;
+        }
+        
+        .conteiner-inputs
+        {
+            width: 48%;
+            height: 50px;
+            
+            margin-bottom: 5px;
+        }
+        
+        .icons-inputs
+        {
+            position: absolute;
+            right: 3px;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-top: -4px;
+            opacity: 0.3;
+        }
+        
+        .with-icons
+        {
+            position: relative;
+            width: 100%;
+            float: left;
+            padding-right: 30px;
+            box-sizing: border-box;
+        }
+        .conteiner-inputs label.error, #title-error, #type-error
+        {
+            margin-top: -15px;
+            font-size: 10px;
+        }
+        .conteiner-inputs label
+        {
+            position: absolute;
+            top: 55px;
+        }
+        
+        #conteiner-logo{
+            position: relative;
+            float: left;
+            width: 150px;
+            margin-bottom: 20px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        
+        #conteiner-logo img {
+            width: 100%;
+        }
+        
+        .label-event-form
+        {
+            color: #8e8e8e;
+        }
+        
+        .label-event-form, .conteiner-inputs-event
+        {
+            position: relative;
+            float: left;
+            text-align: left;
+            width: calc(100% - 170px);
+        }
+        
+        .conteiner-inputs-event #event-description
+        {
+            width: calc(100% + 170px);
+        }
+        .conteiner-inputs-event #form-colors-conteiner
+        {
+            width: calc(100% + 170px);
+        }
+        
+        .form-color-item
+        {
+            width: 15%;
+            margin-right: 1.666666667%;
+
+            margin-bottom: 1.666666667%;
+
+        }
+
+        .form-color-item:nth-child(5n+0)
+        {
+            margin-right: 1.666666667%;
+        }
+
+        .form-color-item:nth-child(6n+0)
+        {
+            margin-right: 0%;
+        }
+
+        .form-color-item:nth-child(1n+15)
+        {
+            margin-bottom: 1.666666667%;
+        }
+
+        .form-color-item:nth-child(1n+19)
+        {
+            margin-bottom: 0%;
+        }
+        
+        .form-event
+        {
+            margin: 1.5%;
+            margin-top: 80px;
+        }
+        
+        .conteiner-inputs-event label.error
+        {
+            margin-top: -15px;
+        }
+        
+        .toast {
+            position: fixed;
+            border-radius: 3px;
+            bottom: 30px;
+            padding: 15px 20px;
+            background: #292929;
+            box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+        }
+        
+        .toast img{
+            right: 20px;
+        }
+        
+        .toast span
+        {
+            margin-right: 40px;
+        }
+        
+    </style>
+</head>
+
+<body style="display: none;">
+    <header class="primary-color">
+        <img class="vertical-center" src="Images/ic_menu_white_24px.svg">
+        <div class="title-header vertical-center text-color">Event Control Panel</div>
+        <div class="conteiner-user-info vertical-center">
+            <img class="float-right" style="margin-left: 10px;" src="Images/ic_account_circle_white_24px.svg">
+            <div id="user-name" class="float-right text-color" style="margin-top: 2px;"></div>
+        </div>
+    </header>
+    <nav>
+        <div id="conteiner-event-info" data-bind="click: function(item, event) { changeView(showInfoEvent);}">
+            <div id="conteiner-event-logo" class="float-left">
+                
+            </div>
+            <div id="conteiner-title-event" class="vertical-center">
+                <div id="title-event" class="float-left" data-bind="text: eventObj.name"></div>
+            </div>
+        </div>
+        <div data-bind="click: function() { changeView(showConferences);}" id="show-conferences" class="conteiner-nav-option">
+            <img src="Images/ic_account_balance_black_24px.svg">
+            <div>Conferences</div>
+        </div>
+        <div id="show-speakers" class="conteiner-nav-option">
+            <img src="Images/ic_record_voice_over_black_24px.svg">
+            <div>Speakers</div>
+        </div>
+    </nav>
+    <!--<section id="panel-view">
+    
+    </section>-->
+   <section id="panel-view">
+       
+    </section>
+    
+    <div id="toast-conteiner" class="horizontal-center toast" style="display: none;">
+        <span id="toast-text" class="text-color"></span> <img id="toast-icon" src="Images/ic_done_white_24px.svg" class="vertical-center">
+    </div>
+    
+    <svg style="cursor: pointer; display: none;" data-bind="click: showAddElement" id="add-button" fill="" height="80" viewBox="0 0 24 24" width="80" xmlns="http://www.w3.org/2000/svg" class="shadowSvg">
+        <path d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/>
+    </svg>
+  
+</body>
+</html>

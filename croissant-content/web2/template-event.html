@@ -1,0 +1,48 @@
+<style>
+    #save-form-button
+    {
+        font-size: 20px;
+    }
+</style>
+
+<div id="form-conteiner-udpate-event" class="form-conteiner form-event">
+    <input type="file" name="file" id="file" style="display: none;"/>
+    <form id="form-edit-event">
+            <div class="form-title-conteiner">
+            
+                <h2>Event Manager</h2>
+                
+            </div>
+            <div class="form-content-conteiner">
+                <div id="conteiner-logo">
+                </div>
+                <div class="label-event-form">
+                    Name
+                </div>
+                <div class="conteiner-inputs-event">
+                    <input id="event-name" type="text" class="text-input" name="name" data-bind="value: eventObj.name" autocomplete="off" >
+                </div>
+                <div style="clear: both;" class="label-event-form">
+                    Description
+                </div>
+                <div class="conteiner-inputs-event">
+                    <textarea data-bind="value: eventObj.description" name="description" rows="1" id="event-description" class="text-input" autocomplete="off"></textarea>
+                </div>
+                <div class="label-event-form">
+                    <br>Theme<br>
+                    <input id="event-primary-color" class="text-input" type="text" name="eventPrimaryColor" autocomplete="off" style="display: none;"/>
+                    <input id="event-accent-color" class="text-input" type="text" name="eventAccentColor" autocomplete="off" style="display: none;"/>
+                </div>
+                
+                <div class="conteiner-inputs-event">
+                    <div id="form-colors-conteiner"></div>
+                </div>
+                
+                <div style="clear: both"></div>
+            </div>
+            <div class="form-buttons-conteiner">
+                <button id="save-form-button" type="submit" class="flat-button float-right text-accent">SAVE</button>
+                <div style="clear:both"></div>
+            </div>
+    </form>
+</div>

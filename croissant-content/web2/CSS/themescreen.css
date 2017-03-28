@@ -1,0 +1,13 @@
+
+.color{
+    width: 20%;
+    height: 50px;
+    position: relative; float: left;
+}
+
+.parent{
+    width: 100%;
+    position: relative; float: left;
+    
+    
+}

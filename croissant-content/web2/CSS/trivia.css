@@ -1,0 +1,575 @@
+* { font-family:arial; }
+body 
+{ 
+	margin:0px; 
+	background-image: url(../Images/background.png);
+}
+header
+{
+	width: 100%;
+	text-align: center;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+	/*z-index: 10;*/
+}
+#div-logout, #info-user, #info-user img, #text-logout, #div-logout img, .user-name, #separator, #header, header, 
+#hamburguer, .page-title, #subject-matter, #info-user-mobile, #img-user-mobile, .tabs, #onhold, #sent-speaker, #denied, #tabs,
+.comment, .question-comment
+{
+	position: relative; float: left;
+}
+
+#event-logo
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+}
+
+#event-logo img, #event-logo div
+{
+    position: relative;
+    float: left;
+    color: white;
+}
+
+#event-logo div
+{
+    line-height: 40px;
+    margin-right: 10px;
+}
+
+#event-logo img
+{
+    width: 40px;
+}
+
+.notification
+{
+	display: none;
+	width: 250px;
+	position: fixed;
+	padding: 15px 8px 15px 8px;
+	bottom: 50px;
+	left:50%;
+	transform: translateX(-50%);
+	-webkit-transform: tranlsateX(-50%);
+	background: #374E78;
+	color: white;
+	border-radius: 5px;
+}
+.text-notification
+{
+	position: relative;
+	float: left;
+	margin-left: 21px;
+}
+.close-notification
+{
+	position: relative;
+	float: right;
+	margin-right: 4px;
+}
+.line-notification
+{
+	position: absolute;
+	left: 230px;
+	width: 1px;
+	height: 90%;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	background: rgba(255,255,255,0.5);
+}
+.user-name 
+{
+    font-size: 18px;
+    color: #FFF;
+    margin: 16px auto auto 10px;
+}
+
+/*tablet info user*/
+#info-user-mobile
+{
+	width: 100%;
+	/*height: 50px;*/
+	background: #327D75;
+	display: none;
+}
+#img-user-mobile
+{
+	margin: 10px 0px 10px 10px;
+}
+#img-user-mobile img
+{
+	width: 40px;	
+}
+#logout
+{
+	right: 10px;
+	font-size: 11px;
+	top: 50%;
+	position: absolute;
+	transform: translateY(-50%);
+	height: 30px;
+	border: 0px;
+	color: #FFF;
+	background: #D15F2A;
+	border-radius: 5px;
+}
+
+/*Desktop info user*/
+#content-menu
+{
+	width:768px;
+	display: inline-block;
+	background-color: #4E8A84;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 0px 8px 10px rgba(0,0,0,0.2); 
+
+}
+#info-user
+{
+	width: 575px;
+	/*background-color: yellow;*/
+	
+}
+#info-user img
+{
+	width: 40px;
+	margin: 5px auto 5px 10px;
+}
+
+#div-logout
+{
+	width: 192px;
+	/*background-color: purple;*/
+	border-left: 1px solid #79A8A3;
+	height: 50px;
+}
+#div-logout img
+{
+	width: 35px;
+	margin-top: 8px;
+	margin-left: 10px;
+}
+#text-logout
+{
+	font-size: 18px;
+	color: #FFF;
+	margin: 16px auto auto 10px;
+}
+#text-logout
+{
+	margin-left: 47px;
+}
+
+#content
+{
+	width: 100%;
+	text-align: center;
+}
+#header
+{
+	width: 100%;
+	text-align: center;
+}
+#header
+{
+	background: linear-gradient(to bottom, #2D7069, #175952);
+	
+}
+#logo
+{
+	margin: 10px 0px 10px 0px;
+	display: inline-block;
+}
+#logo img
+{
+	width: 175px;
+}
+#hamburguer 
+{
+	margin: 7px 0px auto 10px;
+	display: none;
+}
+#hamburguer img
+{
+	width: 40px;
+}
+#main
+{
+	display:inline-block;
+	width: 768px;
+	height: auto;
+	/*height: 600px;*/
+	/*background-color: green;*/
+	/*float:left;*/
+}
+#separator
+{
+	height:50px; width:768px; background:transparent;
+}
+#subject-matter
+{
+	width: 100%;
+	height: auto;
+	background-color: white;
+	border-radius: 0px 0px 10px 10px;
+	margin-bottom: 60px;
+}
+.page-title
+{
+	width: 100%;
+	background-color: #FFF;
+	/*height: 90px;*/
+	font-size: 40px;
+	padding: 20px;
+	box-shadow: 0px 0px 50px rgba(0,0,0,0.2);
+	box-sizing: border-box;
+	text-align: left;
+	z-index: 2;
+	color: #2D7069;
+	border-radius: 10px 10px 0px 0px;
+	
+}
+/*#subject-content
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	background: green;
+}*/
+#subject-matter
+{
+	padding-bottom: 35px;
+}
+/*Conference style*/
+.button-options
+{
+	position: relative; float: left;
+}
+
+.page-title
+{
+	padding: 0px;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.15);
+}
+.content-info-conference
+{
+	/*background-color:red;*/
+	margin-left:20px;
+	margin-right:20px;
+	
+}
+.cell-light-green
+{
+	/*background-color: #327D75;*/
+	
+}
+.td-speaker, .td-title, .td-info-conference
+{
+	color: gray;
+	font-size: 22px;
+	width: 50%;
+	padding: 8px;
+	padding-left: 0px;
+	padding-right: 0px;
+	text-align: center;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	color: #2D7069;
+	/*border-right: 1px solid rgba(255,255,255,0.2);*/
+	
+}
+.td-speaker
+{
+	font-size: 22px; padding-left: 10px;
+	/*background: red;*/
+	padding: 8px 0px 8px 0px;
+}
+.td-speaker img
+{
+	position: relative;
+	width: 50px; 
+	vertical-align: middle; 
+	margin-right: 10px; 
+	float: left;
+}
+#content-speaker
+{
+	position: relative;
+	width: 100%;
+	height: auto;
+	float: left;
+}
+#button-back
+{
+	width:80%; background:#D15F2A; border-radius:7px; border:0px;
+	font-size:16pt;
+	height:50px; color:white;
+}
+#button-back:hover { cursor:pointer; }
+#name-speaker
+{
+	position: absolute;
+	top: 50%;
+	color: gray;
+	left: 60px;
+	transform: translateY(-50%);
+	color: #2D7069;
+}
+.td-title
+{
+	font-size: 40px;
+	color: #2D7069;
+	border-top: none;
+
+}
+.td-info-conference:nth-child(1)
+{
+	text-align: left;
+	width: 70%;
+}
+h3
+{
+	margin: 0px;
+	/*background-color: white;*/
+	padding: 0px;
+	display: inline-block;
+	font-size: 23px;
+}
+.table-conference { width: 100%; }
+
+/*Buttons*/
+.contents-options-submenu-mob
+{
+	position:relative; float:left;
+	width: 30%;
+	height: 183px;
+}
+.button-options-askqstns
+{
+	border-radius: 10px;
+	background-color: #4E8A84;
+	margin-top: 30px;
+	width:150px; height: 150px;	
+	transform:translateX(50%);
+	text-align:center;
+}
+.button-options-askqstns:hover
+{
+	cursor:pointer;
+}
+.button-options-askqstns, .icon-options
+{
+	position: relative;
+	float:left; 	
+}
+.icon-options
+{
+	margin:auto 17.5% auto 17.5%; 
+	width: 65%; height:65%;
+}
+.icon-options img
+{
+	width: 100%;
+	height: 100%;	
+}
+.total-center
+{
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+.total-center
+{
+	width: 100%;
+}
+.title-options-askqstns
+{
+	position: absolute;
+	width:100%;
+	bottom: 5px;	
+	/*background-color: red;*/
+	color: #FFF;
+	height: 50px;
+	font-size: 20px;
+	/*font-size: 28px;*/
+}
+
+/****************TRIVIA MODERADOR**************/
+
+.questions { width: 70%;  margin:15px 15% 10px 15%; height: auto; border-bottom: 1px solid #D8D8D8; }
+#create-question, #form-question{width: 70%; margin:10px 15% 10px 15%; height: auto; }
+
+.text-header,.text-headerquestion, .text-info, .buttons, .buttons button, .questions, #create-question, #form-question, .text-instructions, .picker, .picker img, .picker input, .container, .more, .title-header, .sent, .text-question
+{ float:left; position:relative; }
+
+.text-header { color:#2D7069; text-align:left; font-size:12pt; width:28%; margin-top: 10px; margin-bottom: 15px;}
+.text-headerquestion { color:#2D7069; text-align:left; font-size:12pt; width:28%; }
+.text-info, .text-question { height:auto; color:#555; text-align:justify; margin-top: 10px; margin-bottom: 15px;}
+.text-info { width: 72%; } .text-question { width: 100%; }
+.buttons { height:auto; width:50%; margin:0px 25% 0px 25%; }
+.more, .sent
+{ 
+    width:24.8%; margin:0px 0% 10px 11%; padding-top: 2px;
+    font-size: 12pt; height: 18px; border: 0px; border-radius: 3px;  
+}
+.more:hover, .sent:hover{ cursor: pointer; }
+.more { color:#FFF; background:#2D7069; }
+.sent { color:#32637d; font-size:12pt;   background:transparent; border: 1px solid #32637d; }
+.edit, .delete, .save, .cancel
+{ 
+    width: 40%;
+    margin:10px 5% 10px 5%; 
+	height: 40px; border:0px; border-radius: 5px;
+}
+.edit, .save, #more { font-size:16pt; background:#2D7069;  color:#FFF; } 
+.delete, .cancel { color:#D15F2A; font-size:12pt;   background:transparent; border: 1px solid #D15F2A;  }
+.add-new 
+{
+    width: 90%;
+    margin:10px 5% 20px 5%; color:#FFF;
+    font-size:16pt;  background:#32637d;  height: 50px; border:0px; border-radius: 5px;   
+}
+.edit:hover, .add-new:hover, .delete:hover, .save:hover, .cancel:hover { cursor: pointer;}
+.text-instructions, .picker { padding-top:20px; color:#2D7069; text-align:center; font-size:16pt; width:100%;  }
+.write-question textarea 
+{ resize:none; width: 70%; height:120px; margin:20px 14% 10px 14%; font-size: 16pt; color:#555; padding: 1% 5px 1% 5px }
+ 
+
+.picker input { width:65%; margin:10px 0 10px 15%; padding: 1% 5px 1% 5px; font-size: 16pt; height: 28px; color:#555; }
+.picker img { width: 5%;  opacity: 0.5; margin:9px 12% 11px 1%;}
+.picker input:hover { cursor: pointer; }
+
+.text-options input { width: 70%; height:28px; margin:20px 14% 10px 14%; font-size: 16pt; color:#555; padding: 1% 5px 1% 5px }
+
+.container { width: 100%; padding-top:20px; height: auto; }
+#message { width:70%; margin:20px 15% 10px 15%; font-size: 16pt; color:#555;  }
+
+/******************EDIT MODE QUESTION TRIVIA*********************/
+.txt-edit { width:60%; margin:0px 6% 0px 4%; height: 24px; font-size: 12pt; color:#333; padding:3px 1% 3px 1%; }
+.txt-areaedit { width:96%; padding:5px 2% 5px 2%; height: 80px; margin-bottom: 10px; color:#333; font-size: 12pt; resize:none;  }
+
+
+/****************TRIVIA ASISTENTE**************/
+
+#show-question, .div-option, .txt-option, .txt-question, .div-button, #option-block, #div-timer, .message-error, .ok-btn
+{ position:relative; float:left; }
+
+.txt-question {     
+	height: auto;
+    color: #555;
+    text-align: center;
+    width: 75%;
+    margin: 0px 12.5% 0px 12.5%;
+    font-size: 14pt;
+    padding: 10px 0 10px 0; 
+	
+} 
+#show-question { width: 70%;  margin:15px 15% 10px 15%; height: auto; }
+.txt-option { text-align: center; width: 70%; height:28px; margin:20px 15% 10px 15%; font-size: 16pt; color:#2D7069; }
+.div-option 
+{ 
+    width: 70%; margin:10px 15% 10px 15%; color:#555; 
+    border-radius: 5px; border: 1px solid #D8D8D8; height: auto; font-size:16pt;
+    padding: 10px 10px 10px 10px;
+}
+.div-option:focus{ border: 2px solid #2D7069; color:#2D7069; }
+.div-button { height:auto; width:50%; margin:0px 25% 0px 25%; }
+.send, #ok-button, .ok-btn{ background:#04B431; }
+.send:hover, .div-option:hover, #ok-button:hover, .ok-btn:hover{ cursor:pointer; }
+.div-button button, #ok-button
+{  
+   	color:#FFF;
+    font-size:16pt;  height: 40px; border:0px; border-radius: 5px;
+}
+.div-button button {  width: 60%; margin:10px 0 10px 0; }
+#ok-button {  width: 30%; margin:10px 5% 10px 5%;  }
+.ok-btn
+{
+	width: 40%; 
+    margin:30px 30% 30px 30%; color:#FFF;
+    font-size:16pt;  height: 40px; border:0px; border-radius: 5px;
+}
+.correct { background:#04B431; } .incorrect { background:#FE2E2E; }
+#div-timer { width:60%; margin:10px 20% 10px 20%; height: 20px; }
+#div-timer p { color:#b3b3b3; font-size:12pt; text-align:center; }
+.message-error {  width:60%; margin:50px 20% 50px 20%; height: auto; color:#b3b3b3; font-size:24pt; text-align:center; }
+.selected { color:#2D7069;  border: 1px solid #2D7069; }
+
+
+
+/****************MODO TABLET**************/
+
+@media only screen and (max-width:768px)
+{
+	body 
+	{
+		background-image: none;
+		background-color: #E6E6E6;
+	}
+	#main { width:100%; }
+	#separator{ display:none; }
+	#content-menu { display:none; }
+	#img-user-mobile {margin: 10px 0px 10px 10px;}
+	#img-user-mobile img {width: 50px;}
+	.content-info-conference 
+	{
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.user-name
+	{ 
+		color: #FFF; width: 60%;
+		text-align: left; float: none;
+		top: 50%;	position: absolute;
+		transform: translateY(-50%); font-size: 20px; left: 70px; margin: 0px;
+	}
+	.picker img 
+	{
+		width: 5%;
+		opacity: 0.5;
+		margin: 9px 7% 11px 1%;
+	}
+	.picker 
+	{
+		width: 98%;
+		margin: 5px 1% 5px 1%;
+	}
+	#logout{ right: 10px;font-size: 20px; height: 40px; padding: 0px 20px 0px 20px;}
+	.page-title { border-radius: 0px; }
+	#subject-matter { border-radius:0px; margin-bottom:0%; }
+	#info-user-mobile{ display: inline; }	
+    #button-back
+    {
+        width:90%;
+        font-size:14pt;
+    }
+    #create-question { width:80%; margin:10px 10% 10px 10%; }
+    .add-new { width:80%; margin:10px 10% 20px 10%; font-size: 14pt;}
+    
+}
+@media only screen and (max-width:480px)
+{
+	#button-back 
+	{
+    	width: 100%;
+    	font-size: 13pt;
+	}
+	.div-option
+	{
+		    width: 80%;
+    		margin: 10px 10% 10px 10%;
+	}
+	.div-button button
+	{  
+		width: 100%; 
+		margin:10px 0 10px 0; color:#FFF;
+		font-size:16pt;  height: 40px; border:0px; border-radius: 5px;
+	}
+	.message-error {  width:70%; margin:50px 15% 50px 15%; height: auto; color:#b3b3b3; font-size:20pt;}
+}

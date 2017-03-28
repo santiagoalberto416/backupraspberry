@@ -1,0 +1,116 @@
+<html>
+	<head>
+		<title>Croissant</title>
+		<link rel="shortcut icon" href="Images/croissantico.ico">
+		<link href="CSS/moderator.css" rel="stylesheet"></link>	
+		<link href="CSS/notification.css" rel="stylesheet"></link>
+		<link href="CSS/conference.css" rel="stylesheet"></link>
+		<link rel="stylesheet" href="CSS/svg.css" type="text/css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="JS/animation.js"></script>
+		<script src="JS/functions.js"></script>
+		<script src="JS/TweenMax.min.js"></script>
+		<script src="JS/moderator.js"></script>
+		<script src="JS/login.js"></script>		
+		<script src="JS/language.js"></script>
+		<script src="JS/trivia.js"></script>
+		<script src="JS/scores.js"></script>
+		<script src="JS/svg.js"></script>
+		<script src="JS/showAcceptQuestion.js"></script>
+		<script src="JS/setTheme.js"></script>
+        
+	</head>
+	
+	<body onload = "showInfo();languageScore();">
+		<div id="content">
+			<header>
+				<div id="header">
+					<div id="hamburguer">
+						<img src="Images/menu-icon.png"></img>
+					</div>
+					<div id="logo">
+						<img src="Images/logo.png"></img>
+					</div>
+             <div id="event-logo"><div id="event-name"></div></div>
+				</div>
+			</header>
+				<div id="main">
+					<div id="content-menu">
+						<div id="info-user">
+							<img class="img-user" src="Images/user.png"></img>
+							<div id='moderator-name' class="user-name">
+							</div>
+						</div>
+						<div id="div-logout" onclick="logout();">
+							<div id="text-logout">Logout</div>
+							<img src="Images/logout.png"></img>
+						</div>
+					</div>
+					<!--Only for tablets-->
+					<div id="info-user-mobile">
+					
+						<div id="img-user-mobile">
+							<img class="img-user" src=""/>
+						</div>
+						<div id="user-name" class="user-name">
+						</div>
+						<button id="logout" onclick="logout();">
+							Logout
+						</button>				
+					</div><!--End-->
+					
+					<div id="separator"></div>
+					<div class="page-title">
+						<div class="content-info-conference">
+							<table class="table-conference" cellspacing="0" cellpadding="0" >
+								<tr>
+									<td class='td-title' id="confT" colspan="2"></td>								
+								</tr>
+								<tr>
+									<td class="td-speaker">
+										<div id="content-speaker">
+											<img style="width: 50px; height: 50px;"></img> 
+											<div id="name-speaker"></div>
+										</div>
+									</td>
+									<td class="td-speaker">									
+										<div id="back">
+											<button onclick="window.location='conferences-moderator.html'" id="button-back">
+												Back to options
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td class='td-info-conference' id="placeC">
+										<h3>Room</h3>
+										<br>
+									</td>
+									<td class='td-info-conference'>
+									<img style="width: 18px; margin-bottom: 3px; opacity: 0.5;" src="Images/calendar2.png">
+									</img><div id="date"> </div><div id="time"></div></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div id="subject-matter" style="">
+						<div id='container'></div>
+						<svg id="chart">
+						</svg>
+						<div id='images'></div>
+						<svg id="svg">
+						</svg>
+						<div id='stats'></div>
+					</div><!-- subject-matter -->
+				</div>
+				<div id="notification" class="notification" onClick='window.location="play-trivia.html";'>
+					<div class="text-notification" id="seeAndClose">New Trivia Question</div>
+					<div class="line-notification" ></div>
+					<div class="close-notification" id="closeModal">X</div>
+				</div> <!--main -->
+			</div><!-- content -->	
+			
+		</div>
+	</body>
+</html>

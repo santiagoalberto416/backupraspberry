@@ -1,0 +1,75 @@
+* { font-family: arial; }
+body { margin: 0px; }
+
+#cover, #modal
+{
+	position: absolute;
+	left: 0px; top: 0px; width:0px; height:0px;	
+	z-index: 3;
+}
+#cover
+{
+	background:rgba(0, 0, 0, .5);
+}
+#modal
+{
+	background:#FFF;
+	border-radius: 12px 12px 12px 12px;
+	box-shadow: 0px 0px 20px #111; 
+	
+}
+#titlebar
+{
+	position: relative; float:left; text-align: center;
+	width:100%; border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid #d9d9d9;
+}
+#title 
+{
+	position: relative; float:left;
+	width: 32%;
+	font-size: 12pt; color: #404040;
+	margin: 0px 10% 0px 30%;
+	padding: 10px 0px 10px 3%;
+}
+#close
+{
+	position: relative; float:left;
+	width:22%;
+	text-align:right;
+	padding: 6px 3% 0px 0px;
+}
+#close button
+{
+	font-size: 12pt; font-weight: bold; color:#d9d9d9; 
+	background:transparent; border: 0px; 
+	cursor:pointer;
+}
+.div-alert, .icon-modal, .div-btn, .cont-alert
+{
+	position: relative; float: left;
+}
+.div-alert 
+{
+	
+	width:100%; margin:30px 0 10px 0; font-size: 12pt; color:#404040;
+}
+.icon-modal
+{
+	width: 15%;
+	margin:20px 1% 10px 4%; 
+}
+.btn-accept, .btn-cancel
+{
+	width: 40%; margin:10px 5% 10px 5%; border: 0px;
+	height: 30px;color:FFF; border-radius: 5px;
+}
+.div-btn { width: 100%; height: 50px; margin-top: 10px; }
+.btn-accept { background: #2D7069; font-size: 14pt;  } 
+.btn-cancel {  color:#D15F2A; background:transparent; border: 1px solid #D15F2A; font-size: 12pt; }
+.btn-accept, .btn-cancel
+{ cursor: pointer; }
+.cont-alert 
+{
+	width:90%; margin: 0px 5% 0px 5%;
+}

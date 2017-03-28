@@ -1,0 +1,97 @@
+#div-logout, #info-user, #info-user img, .options-menu, nav, #text-logout, #div-logout img, .image-options, .text-options
+{
+		position: relative; float: left;
+}
+nav
+{
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+#content-menu
+{
+	width: 768px;
+	display: inline-block;
+	background-color: #4E8A84;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: 0px 8px 10px rgba(0,0,0,0.2); 
+
+}
+#info-user
+{
+	width: 575px;
+	height: 60px;
+	
+}
+#info-user img
+{
+	width: 40px;
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	transform: translateY(-50%);
+}
+#info-user div
+{
+	width: 500px;
+	position: absolute;
+	left: 50px;
+	top: 5px;
+	text-align: left;
+	
+}
+
+#div-logout
+{
+	width: 192px;
+	/*background-color: purple;*/
+	border-left: 1px solid #79A8A3;
+	height: 60px;
+}
+#div-logout img
+{
+	width: 35px;
+	position: absolute;
+	top: 50%;
+	right: 45px;
+	transform: translateY(-50%);
+}
+#text-logout
+{
+	font-size: 18px;
+	color: #FFF;
+}
+#text-logout
+{
+	margin-left: 47px;
+	position: absolute;
+	top: 50%;
+	left: 5px;
+	transform: translateY(-50%);
+}
+.options-menu
+{
+	width:191px;
+	border-top: 1px solid #79A8A3;
+	border-right: 1px solid #79A8A3;
+	cursor: pointer;
+}
+.options-menu:nth-child(6) {border-right: none; border-radius: 0px 0px 30px 0px;}
+.image-options
+{
+	width: 100%;
+	/*background-color: red;*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.image-options img
+{
+	width: 50%;
+}
+.text-options
+{
+	width: 100%;
+	margin: 0px auto 20px auto;
+	font-size: 25px;
+	color: #FFF;
+}

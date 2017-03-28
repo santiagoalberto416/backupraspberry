@@ -1,0 +1,42 @@
+<div id="conteiner-add-conference" style="display:none;" class="form-conteiner conferences-conteiner">
+        <form id="form-add-conference">
+            <div class="form-title-conteiner">
+                <h2>Conference Manager</h2>
+                <h4>Add conference</h4>
+            </div>
+            <div class="form-content-conteiner">
+                <input type="text" name="title" class="text-input" placeholder="Name" autocomplete="off"/>
+                <div class="conteiner-inputs to-left">
+                    <input type="text" name="place" class="text-input with-icons" placeholder="Place" autocomplete="off"/>
+                    <img class="icons-inputs" src="Images/ic_domain_black_24px.svg">
+                </div>
+                <div class="conteiner-inputs to-right">
+                    <input type="text" name="room" class="text-input with-icons" placeholder="Room" autocomplete="off"/>
+                    <img class="icons-inputs" src="Images/ic_place_black_24px.svg">
+                </div>
+                <div class="conteiner-inputs to-left" style="margin-bottom: 10px;">
+                    <input id="conference-date" type="text" name="date" class="text-input with-icons" placeholder="Date" autocomplete="off"/>
+                    <img class="icons-inputs" src="Images/ic_event_black_24px.svg">
+                </div>
+                <div class="conteiner-inputs to-right" style="margin-bottom: 10px;">
+                    <input id="conference-time" type="text" name="time" class="text-input with-icons" placeholder="Time" autocomplete="off"/>
+                    <img class="icons-inputs" src="Images/ic_access_time_black_24px.svg">
+                </div>
+                
+                <div class="labels-form">Type</div>
+                <select type="text" name="type" class="text-input" required>
+                    <option value=""></option>
+                    <option value="Conference">Conference</option>
+                    <option value="Workshop">Workshop</option>
+                </select>
+                <div class="labels-form" style="padding-top: 0px;">Description</div>
+                <textarea name="description" rows="1" id="event-description" class="text-input" autocomplete="off"></textarea>
+                <div style="clear:both"></div>
+            </div>
+            <div class="form-buttons-conteiner">
+                <a id="close-modal" class="flat-button float-right">CANCEL</a>
+                <button type="submit" class="flat-button float-right text-accent">SAVE</button>
+                <div style="clear:both"></div>
+            </div>
+        </form>
+    </div>

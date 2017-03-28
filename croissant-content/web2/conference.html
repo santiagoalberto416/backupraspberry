@@ -1,0 +1,120 @@
+<html>
+	<head>
+		<title>Croissant</title>
+		<link rel="shortcut icon" href="Images/croissantico.ico">	
+		<link href="CSS/style.css" rel="stylesheet" defer></link>
+		<link href="CSS/menu-desktop.css" rel="stylesheet" defer></link>
+		<link href="CSS/conference.css" rel="stylesheet" defer></link>
+		<link href="CSS/notification.css" rel="stylesheet" defer></link>
+		<script src="JS/jquery-3.0.0.min.js" type="text/javascript" defer></script>
+        <script src="JS/setTheme.js" defer></script>
+		<script src="JS/functions.js" defer></script>
+		<script src="JS/login.js" defer></script>
+		<script src="JS/language.js" defer></script>
+		<script src="JS/showAcceptQuestion.js" defer></script>
+		
+		<!--viewport: utilizado únicamente por dispositivos móviles.-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	</head>
+	
+	<body onLoad="onLoad(), ShowConf(), showInfo(),languageAssistant()">
+		<div id="content">
+			<header>
+				<div id="header">
+					<!--<div id="hamburguer" onclick="showSideMenu();">
+						<img src="Images/menu-icon.png"></img>
+					</div>-->
+					<div id="logo">
+						<img src="Images/logo.png"></img>
+					</div>
+                <div id="event-logo"><div id="event-name"></div></div>
+				</div>
+			</header>
+			<div id="main">
+				<nav>
+					<div id="content-menu">
+						<div id="info-user">
+							<img class="img-user" src="Images/user.png"></img>
+							<div id='moderator-name' class="user-name">
+								Hello
+							</div>
+						</div>
+						<div id="div-logout" onclick="logout();">
+								<div id="text-logout"></div>
+								<img src="Images/logout.png"></img>
+						</div>
+					</div>
+				</nav>
+				<div id="info-user-mobile">
+				
+					<div id="img-user-mobile">
+						<img class="img-user" src=""/>
+					</div>
+					<div id="user-name" class="user-name">
+					</div>
+					<button id="logout" onclick="logout();">
+						
+					</button>
+				
+				</div>
+				<div class="page-title" id ="page-title">
+					<div class="content-info-conference">
+						<table class="table-conference" cellspacing="0" cellpadding="0" >
+							<tr>
+								<td class='td-title' colspan="2" id="title-Conference"></td>
+								
+							</tr>
+							<tr>
+								<td class="td-speaker">
+									<div id="content-speaker">
+										<img src="/Images/user-black.png" style="opacity: 0.3;"></img> 
+										<div id="name-speaker"></div>
+									</div>
+								</td>
+								<td class="td-speaker">									
+									<div id="back">
+										<button onclick="window.location='conferences-speaker.html'" id="button-back">
+											
+										</button>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-info-conference' id="place-Conference"><h3 id="room-place"></h3><br></td>
+								<td class='td-info-conference' id="info-Conference"><img style="width: 18px; margin-bottom: 3px; opacity: 0.5;" src="Images/calendar2.png"></img></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div id="subject-matter" style="">
+					<div id="subject-content">
+						<button id="ask-question" class="button-options" onclick="window.location='ask_question.html'">Ask a Question</button>
+						<!--<button id="play-trivia" class="button-options" onclick="window.location='play-trivia.html'"><div id="notificationGlobe" class="notificationGlobe"></div>Play Trivia</button>
+						<button id="view-scores" class="button-options">View Scores</button>-->
+						<button id="activity-conference" class="button-options" onclick="window.location='activity_conference.html'"><div id="notificationGlobe" class="notificationGlobe"></div>Activity conference</button>
+
+					</div>
+				</div> <!-- subject-matter -->
+				
+				<div id="notification" onclick="window.location='play-trivia.html'" class="notification">
+					<div class="text-notification" id="seeAndClose">You have new question!</div>
+					<div class="line-notification" ></div>
+					<div class="close-notification" id="closeModal">X</div>
+				</div>
+				<!--
+				<div id="notification" onclick="window.location='play-trivia.html'" class="notification">
+					<div class="text-notification" id="seeAndClose">You have new question!</div>
+					<div class="line-notification" ></div>
+					<div class="close-notification" id="closeModal">X</div>
+				</div>-->
+		</div>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="JS/animation.js"></script>
+		<script src="JS/TweenMax.min.js"></script>
+		<script src="JS/CSSPlugin.min.js"></script>
+		<script src="JS/ScrollToPlugin.min.js"></script>
+		<script src="JS/functions.js"></script>
+		<script src="JS/classes.js"></script>
+		<script src="JS/assistant.js"></script>
+	</body>
+</html>

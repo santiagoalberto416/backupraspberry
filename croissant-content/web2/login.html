@@ -1,0 +1,55 @@
+ <html>
+	<head>
+		<title>Log In</title>
+		<link href="CSS/login.css" rel="stylesheet"></link>
+		<link rel="shortcut icon" href="Images/croissantico.ico">
+        <script src="JS/jquery-3.0.0.min.js"></script>
+		<script src="JS/login.js"></script>
+		<script src="JS/language.js"></script>
+		<!--viewport: utilizado únicamente por dispositivos móviles.-->
+		<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	</head>
+	<body onload="languageLogin()">
+		<div id ="content">
+			<header>
+					<div id="header">
+						<div id="logo">
+							<img src="Images/logo.png" ></img>
+						</div>
+					</div>
+			</header>
+
+			<div id="main" >
+				<div id="all-login">
+					<div id="log-header"></div>
+					<div id="login">
+						<div style="display:none;" class="alert alert-danger hidden" id="erro-cnt" role="alert">
+							<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+							<span class="sr-only">Error:</span><span id="erro-txt"></span>
+                        </div>
+						<div id="title">
+							<h1>Sign Up</h1>
+						</div>
+						<div id="container">
+							<div id="container-mail">
+								<div id="img-mail"><img src="Images/mail.png"></img></div>
+								<input id="txtEmail" type="text" name="txtEmail" placeholder="E-mail" autofocus>
+							</div>	
+							<div id="container-pass">
+								<div id="img-pass"><img src="Images/pass.png"></img></div>
+								<input id="txtPassword" type="password" name="txtPassword" placeholder="Password">
+							</div>						
+						</div>
+						<div id="btn-log">
+							<button type="button" name="button" id="log" onclick="login();">Log In</button>		
+						</div>
+							<div id="text-register" class="text-sign"> Or you can <a id="registered" href="register.html">Register</a></div>
+					</div>
+				</div>
+			</div>
+		</div>		
+		
+
+	
+	</body>
+</html>

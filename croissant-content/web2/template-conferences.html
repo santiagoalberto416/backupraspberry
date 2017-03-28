@@ -1,0 +1,23 @@
+<style>
+    #conteiner-conferences
+    {
+        margin-bottom: 130px;
+    }
+</style>
+
+<div id="conteiner-conferences" data-bind="foreach: conferences" class="grid">
+        <div class="form-conteiner conferences-conteiner grid-item">
+            <div class="form-title-conteiner">
+                <h2 data-bind="text: title"></h2>
+                
+            </div>
+            <div class="form-content-conteiner">
+                <h3 style="text-align: left;" data-bind="text: place"></h3>
+                <h5 style="text-align: left;" data-bind="text: date"></h5>
+            </div>
+            <div class="form-buttons-conteiner">
+                <button class="flat-button float-right text-accent">SHOW MORE</button>
+                <div style="clear:both"></div>
+            </div>
+        </div>
+       </div>
